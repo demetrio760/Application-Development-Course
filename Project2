@@ -1,0 +1,31 @@
+# Name: Demetrio Marruffo
+# GiveMeAGrade V1
+# Date: 10/2/2022
+
+# The uncommented portion allows you to input a grade, while the commented will allow you to open a file.
+
+# This is where the variable is defined. 
+grade_percentage = 0
+
+# This funtion opens the file. 
+# file = open("mygrade.txt")
+
+# This function will read the first line of the txt file. 
+# grade_percentage = float(file.readline(1))
+
+
+# This is how the user will be able to enter their grade:
+grade_percentage = float(input("Enter your percentage: "))
+
+# These functions will translate a number grade as a letter grade.
+
+if grade_percentage >= 90 and grade_percentage <= 100:
+    print("Your letter grade is: A")
+elif grade_percentage >= 80 and grade_percentage <=89:
+    print("Your letter grade is: B")
+elif grade_percentage >= 70 and grade_percentage <= 79:
+    print("Your letter grade is: C")
+elif grade_percentage >=60 and grade_percentage <=69:
+    print("Your letter grade is: D")
+else:
+    print("Your letter grade is: F")
