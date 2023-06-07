@@ -1,0 +1,44 @@
+# Name: Demetrio Marruffo
+# I've Got Your Number V1
+# Date: 10/30/2022
+# This is an example of how to input phone number with letters: 505-EAT-FOOD
+
+# This is what will define the first number that is inputed.
+
+def PhNum(AlphPhoNumber):
+
+#This defines the multiple parts of the number, such as the area code and the alphabetic part of the phone number. 
+
+    Num=AlphPhoNumber.split('-')
+    TheAreaCode=Num[0]
+    FourDigits=Num[1:]
+    TheNumber=''
+
+#This translates the alphabetical phone number into a fully numerical phone number. 
+
+    for n in FourDigits:
+        for i in range (len(n)):
+            if n[i] in 'ABC':
+                TheNumber=TheNumber+'2'
+            elif n[i] in 'DEF':
+                TheNumber=TheNumber+'3'
+            elif n[i] in 'GHI':
+                TheNumber=TheNumber+'4'
+            elif n[i] in 'JKL':
+                TheNumber=TheNumber+'5'
+            elif n[i] in 'MNO':
+                TheNumber=TheNumber+'6'
+            elif n[i] in 'PQRS':
+                TheNumber=TheNumber+'7'
+            elif n[i] in 'TUV':
+                TheNumber=TheNumber+'8'
+            elif n[i] in 'WXY':
+                TheNumber=TheNumber+'9'
+        TheNumber=TheNumber+'-'
+    return TheAreaCode+'-'+TheNumber[:-1]
+
+#This outputs the fully numeric phone number and allows you to input an alphabetical phone number. 
+
+AlphPhoNumber = input("Enter your alphabetical phone number: ")
+NewNum=PhNum(AlphPhoNumber)
+print(NewNum)
